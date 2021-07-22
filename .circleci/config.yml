@@ -5,6 +5,7 @@ jobs:
     docker: 
       - image: circleci/node:13.8.0
     steps:
+      - run: mkdir ~/workspace
       - run: echo "workspace-input" > ~/workspace/sharing
       - persist_to_workspace:
           root: ~/workspace
